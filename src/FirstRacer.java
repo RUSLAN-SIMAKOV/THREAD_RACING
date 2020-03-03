@@ -5,10 +5,10 @@ public class FirstRacer extends Thread {
     }
 
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             System.out.printf("FirstRacer   %d \n", i);
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 System.out.println("FirstRacer has been interrupted");
             }
