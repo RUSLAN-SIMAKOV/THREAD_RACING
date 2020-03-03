@@ -1,18 +1,15 @@
 public class SecondRacer implements Runnable {
 
-    SecondRacer() {
-        System.out.printf("SecondRacer is running \n");
+    public SecondRacer() {
+        System.out.println("SecondRacer is running");
     }
 
     @Override
     public void run() {
-        for (int i = 0; i < 100; i++) {
-            System.out.printf("SecondRacer   %d \n",  i);
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                System.out.println("SecondRacer has been interrupted");
-            }
+        try {
+            Counter.incrementCounter();
+        } catch (InterruptedException e) {
+            System.out.println("Thread Interrupted");
         }
     }
 }
